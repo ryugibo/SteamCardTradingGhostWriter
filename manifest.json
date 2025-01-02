@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "SteamCardTradingGhostWriter",
+  "description": "A program that writes posts for Steam trading card transactions on your behalf",
+  "version": "1.0",
+  "icons": {
+    "16": "images/16.png",
+    "32": "images/32.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "action": {
+    "default_icon": "images/32.png",
+    "default_title": "SteamCardTradingGhostWriter",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://steamcommunity.com/profiles/*/gamecards/*"],
+      "js": ["scripts/inject.js"]
+    }
+  ]
+}
