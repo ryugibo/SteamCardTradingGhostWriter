@@ -6,8 +6,23 @@
     <title>Document</title>
   </head>
   <body>
-    <textarea id="txtTitle" readonly></textarea>
-    <textarea id="txtContents" readonly></textarea>
+    <main class="container">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          height: 300px;
+          width: 300px;
+        "
+      >
+        <textarea id="txtTitle" readonly style="resize: none"></textarea>
+        <textarea
+          id="txtContents"
+          readonly
+          style="resize: none; flex-grow: 1"
+        ></textarea>
+      </div>
+    </main>
     <script src="popup.js"></script>
   </body>
 </html>
