@@ -34,6 +34,7 @@ document.getElementById("txtTitle").addEventListener(
   () => {
     document.getElementById("txtTitle").select();
     navigator.clipboard.writeText(document.getElementById("txtTitle").value);
+    document.getElementById("divLog").innerText = "Title copied to clipboard";
   },
   false
 );
@@ -42,6 +43,8 @@ document.getElementById("txtContents").addEventListener(
   () => {
     document.getElementById("txtContents").select();
     navigator.clipboard.writeText(document.getElementById("txtContents").value);
+    document.getElementById("divLog").innerText =
+      "Contents copied to clipboard";
   },
   false
 );
