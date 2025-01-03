@@ -2,6 +2,13 @@ window.onload = function () {
   var query = { active: true, currentWindow: true };
   async function callback(tabs) {
     var currentTab = tabs[0]; // there will be only one in this array
+    const urlRegex =
+      /https:\/\/steamcommunity.com\/profiles\/[0-9]+\/gamecards\/[0-9]+\//;
+    if (!urlRegex.exec(currentTab.url)) {
+      document.getElementById("divLog").innerText = "Please open a badge page";
+      return;
+    }
+    document.getElementById("divLog").innerText = "Click for copy to clipboard";
     const response = await chrome.tabs.sendMessage(currentTab.id, {
       greeting: "hello",
     });
