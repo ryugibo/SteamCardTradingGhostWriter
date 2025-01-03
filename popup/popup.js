@@ -38,6 +38,9 @@ window.onload = function () {
 document.getElementById("txtTitle").addEventListener(
   "click",
   () => {
+    if (!document.getElementById("txtTitle").value) {
+      return;
+    }
     document.getElementById("txtTitle").select();
     navigator.clipboard.writeText(document.getElementById("txtTitle").value);
     document.getElementById("divLog").innerText = "Title copied to clipboard";
@@ -47,6 +50,9 @@ document.getElementById("txtTitle").addEventListener(
 document.getElementById("txtContents").addEventListener(
   "click",
   () => {
+    if (!document.getElementById("txtContents").value) {
+      return;
+    }
     document.getElementById("txtContents").select();
     navigator.clipboard.writeText(document.getElementById("txtContents").value);
     document.getElementById("divLog").innerText =
