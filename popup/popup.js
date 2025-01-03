@@ -28,3 +28,20 @@ window.onload = function () {
   }
   chrome.tabs.query(query, callback);
 };
+
+document.getElementById("txtTitle").addEventListener(
+  "click",
+  () => {
+    document.getElementById("txtTitle").select();
+    navigator.clipboard.writeText(document.getElementById("txtTitle").value);
+  },
+  false
+);
+document.getElementById("txtContents").addEventListener(
+  "click",
+  () => {
+    document.getElementById("txtContents").select();
+    navigator.clipboard.writeText(document.getElementById("txtContents").value);
+  },
+  false
+);
