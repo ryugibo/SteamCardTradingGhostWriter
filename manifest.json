@@ -19,5 +19,6 @@
       "matches": ["https://steamcommunity.com/profiles/*/gamecards/*"],
       "js": ["scripts/inject.js"]
     }
-  ]
+  ],
+  "permissions": ["tabs"]
 }
