@@ -6,7 +6,6 @@ window.onload = function () {
       greeting: "hello",
     });
 
-    console.log(response);
     const have_cards = response["have"];
     const want_cards = response["want"];
 
